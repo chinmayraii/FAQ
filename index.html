@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.js"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</head>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+  body {
+    color: #333;
+    background: #fcfcfc;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .faq-header {
+    font-size: 42px;
+    border-bottom: 1px dotted #ccc;
+    padding: 24px;
+  }
+
+  .faq-content {
+    margin: 0 auto;
+  }
+
+  .faq-question {
+    padding: 20px 0;
+    border-bottom: 1px dotted #ccc;
+  }
+
+  .panel-title {
+    font-size: 24px;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 10px 10px 0 48px;
+    display: block;
+    cursor: pointer;
+  }
+
+  .panel-content {
+    font-size: 20px;
+    padding: 0px 14px;
+    margin: 0 40px;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -o-transition: .4s ease;
+    transition: .4s ease;
+  }
+
+  .panel:checked~.panel-content {
+    height: auto;
+    opacity: 1;
+    padding: 14px;
+  }
+
+  .plus {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 4px;
+    z-index: 5;
+    font-size: 42px;
+    line-height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+  }
+
+  .panel:checked~.plus {
+    color: red;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .panel:checked~.panel-title {
+    color: blue;
+  }
+
+  .panel {
+    display: none;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="faq-header text-center">Frequently Asked Questions</div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="faq-content">
+          <div class="faq-question">
+            <input id="q1" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q1" class="panel-title">What is the Tangoe Tool?</label>
+            <div class="panel-content">•	The Tangoe Tool is a portal that is used to order devices and manage the services of Itron’s corporate cell phones and MiFi devices. Each request will be processed via a unique <b>Order</b> (activity) number which is tracked in the Tangoe Portal. </div>
+          </div>
+    
+          <div class="faq-question">
+            <input id="q2" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q2" class="panel-title">Who is the contact person managing the Itron Tangoe Program?</label>
+            <div class="panel-content">•	The Itron Tangoe Program Manager is Sandy Quintana.
+            </div>
+          </div>
+          <div class="faq-question">
+            <input id="q3" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q3" class="panel-title">What is the scope of the Tangoe services?</label>
+            <div class="panel-content">•	As of 10/12/2021, this program only applies to United States Itron employees.  Tangoe may be added to other regions in the future.
+            </div>
+          </div>
+    
+          <div class="faq-question">
+            <input id="q4" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q4" class="panel-title">How do I navigate the Tangoe Portal?</label>
+            <div class="panel-content">•	Use this link to enter the Tangoe portal:   Tangoe Mobility <a href="https://itron.thefutureis.mobi/ ">https://itron.thefutureis.mobi/ </a> <br>
+              <br>
+              <br>
+              •	After you click the link, you should automatically be logged in with SSO (Single Sign-On) <br>
+              <br>
+              <br>
+              •	If a screen asks you to log in, use your Itron SSO <br>
+              <br>
+              <br>
+              •	Go to the upper right corner of the page and click the   section for navigation training. <br>
+              <br>
+              <br>
+              •	You’ll then see this help pop up window, which will help you navigate.  <br>
+              <br>
+              <img src="img_1.png" alt="" height="100%" width="100%">
+              
+            </div>
+          </div>
+
+          <div class="faq-question">
+            <input id="q5" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q5" class="panel-title">I have a device (phone or MiFi) how do I check my eligibility for an upgrade? (only use this if you have an Itron device)</label>
+            <div class="panel-content">•	Log into the tool and you will see the dashboard. You will see the devices that are assigned to you, click on the line associated with the device that you’d like to upgrade. <br>
+              <br>
+              •	When the device is displayed, click the down arrow to the right of the device name <br>
+              <br>
+              i.	For example: 
+              <br>
+              <img src="img_2.png" alt="" height="100%" width="100%">
+              <br>
+              <br>
+              ii.	Once you click the small arrow, you will see your eligibility status. 
+              <br>
+              <img src="img_3.png" alt="" height="100%" width="100%">
+              <br>
+              <br>
+              •	Click the “+” sign in the upper right corner of the page, and select “ New Activity”. Then click the down arrow on the right, and scroll thru the list and choose “Upgrade” <br>
+              <br>
+              •	Follow the steps to place an upgrade order, see the steps below and see item number 8 below. 
+            </div>
+          </div>
+
+          <div class="faq-question">
+            <input id="q6" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q6" class="panel-title">What are the order steps I will see in Tangoe? </label>
+            <div class="panel-content">1.	Log into the tool and you will see the dashboard. You will see the devices that are assigned to you, click on the line associated with the device that you’d like to upgrade. 
+              <br>
+              <br>
+              2.	When the device is displayed, click the down arrow to the right of the device name
+              <br>
+              <br>
+              i.	For example: 
+              <br>
+              <img src="img_2.png" alt="" height="100%" width="100%">
+              <br>
+              <br>
+              ii.	Once you click the small arrow, you will see your eligibility status. 
+              <br>
+              <img src="img_3.png" alt="" height="100%" width="100%">
+              <br>
+              <br>
+              •	Click the “+” sign in the upper right corner of the page, and select “ New Activity”. Then click the down arrow on the right, and scroll thru the list and choose “Upgrade” <br>
+              <br>
+              •	Follow the steps to place an upgrade order, see the steps below and see item number 8 below. 
+
+            </div>
+          </div>
+
+          <div class="faq-question">
+            <input id="q7" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q7" class="panel-title">How do I order a new phone or new service?</label>
+            <div class="panel-content">1.	To create a new order, go to the upper right corner and click the red button in top right with the “+” sign choose New Activity, click the down arrow and then scroll to select the following activity “Order New Device and New Line of Service”
+              <br>
+              <br>
+              2.	 fill the box in with your name, email or phone number
+              <br>
+              <br>
+              3.	Your name and phone number will appear, click on correct name in the search results and then click the red button “Start Activity” 
+              
+            </div>
+          </div>
+
+          <div class="faq-question">
+            <input id="q8" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q8" class="panel-title">How do I upgrade my phone?</label>
+            <div class="panel-content">1.	To upgrade your device, go to the upper right corner and click the red button in top right with the “+” sign choose New Activity, click the down arrow then scroll to select the following activity “Upgrade Device”
+              <br>
+              <br>
+              2.	Then fill the box in with your name, email or phone number
+              <br>
+              <br>
+              3.	Your name and phone number will appear, click on correct name in the search results and then click the red button “Start Activity”
+              <br>
+              <br> 
+              4.	Your eligibility status and date of upgrade will be displayed. If you are not eligible for an upgrade at this time, please do not submit for an upgrade until your eligibility date. If your device has been lost/stolen or broken, please see the section 11 in this FAQ. 
+              
+            </div>
+          </div>
+          <div class="faq-question">
+            <input id="q9" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q9" class="panel-title">I am traveling internationally, how do I ensure my cell phone will work in the countries I’m visiting?</label>
+            <div class="panel-content">•	Your cell phone automatically is provisioned with Verizon TravelPass or AT&T DayPass and has coverage for the following countries: 
+              <br>
+              Coverage includes: Aland Islands, Albania, Anguilla, Antigua & Barbuda, Argentina, Aruba, Australia, Austria, Bahamas, Barbados, Belgium, Belize, Bermuda, Bolivia, Bonaire, St. Eustatius & Saba, Bosnia & Herzegovina, Brazil, British Virgin Islands, Bulgaria, Canada, Cayman Islands, Chile, China, Colombia, Costa Rica, Croatia, Curacao, Czech Republic, Denmark, Dominica, Dominican Republic, Ecuador, El Salvador, Estonia, Finland, France, French Guiana, Germany, Gibraltar, Greece, Grenada, Guadeloupe, Guatemala, Guernsey, Guyana, Haiti, Honduras, Hong Kong, Hungary, Iceland, India, Ireland, Isle of Man, Israel, Italy, Jamaica, Japan, Jersey, Latvia, Liechtenstein, Lithuania, Luxembourg, Macedonia, Malaysia, Malta, Martinique, Mexico, Moldova, Monaco, Montenegro, Montserrat, Netherlands, Netherlands Antilles, New Zealand, Nicaragua, Norway, Palestinian Authority, Panama, Paraguay, Peru, Poland, Portugal, Romania, St. Barthelemy, St. Kitts & Nevis, St. Lucia, St. Maarten (Dutch), St. Martin, St. Vincent & the Grenadines, San Marino, Serbia, Singapore, Slovakia, Slovenia, South Korea, Spain, Suriname, Svalbard, Sweden, Switzerland, Taiwan, Thailand, Trinidad & Tobago, Turkey, Turks & Caicos, Ukraine, United Kingdom (includes England, Northern Ireland, Scotland, Wales), Uruguay, Vatican City, Venezuela
+              <br>
+              <br>
+              •	<b>TravelPass (Verizon) or DayPass (AT&T)</b> – This is an international package that is pre-provisioned on your line. To confirm that the package is on your line, please submit a Travel Request activity by following the instructions in the below step. 
+              <br>
+              <br>
+              •	<b>TravelPass and DayPass allow unlimited calling, texting and 0.5GB of data per day.</b> It is recommended that you connect to WiFi when available to avoid any data overages. 
+              o	For reference, 0.5GB of data is the equivalent of browsing the internet for 6 hours, streaming 100 songs or watching 1 hour of standard-definition video. 
+              <br>
+              <br>
+              •	If you would like to double check the country coverage, you may open a chat or open a new order under the Help module (white question mark upper right corner of the page) and select “Contact Us” 
+              <br>
+              <br>
+              •	Please submit a travel request if you are unsure about the coverage you will have about the country you are traveling to. <b>TRAVEL REQUESTS MUST BE SUBMITTED AT LEAST 48 BUSINESS HOURS PRIOR TO TRAVELLING.</b> 
+              <br>
+              <br>
+              iii.	Please click on “+” from your dashboard, select “New Activity” then choose Travel Request from the drop down, it will look like this: 
+              <br>
+              <br>
+              <img src="img_4.png" alt="" height="100%" width="100%">
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="faq-content">
+          <div class="faq-question">
+            <input id="q10" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q10" class="panel-title">Can I add a larger travel package to my line if I am traveling for an extended period of time?</label>
+            <div class="panel-content">•	<b>International Monthly Plans</b>  - If you are traveling for longer than 2 weeks, an international plan with higher usage is recommended. To add a larger international package, you’ll need to submit a “Feature Change” activity. To do this, please follow the below instructions:
+              <br>
+             <b>(i)</b>	From your dashboard in Mobi, click the “+”, and select “New Activity”, then choose “Add/Remove Features”
+             <br>
+             <br>
+             <img src="img_5.png" alt="" height="100%" width="100%">
+             <br>
+             <b>(ii)</b>Select the international package that you’d like to add.
+             <br>
+             <br>
+             o	<b>For Verizon, you will have two options:</b> 
+                Both plans provide the same allowance noted below:
+                <br>
+                <br>
+                <b>(i)</b>	Talk: Get 250 minutes to use while traveling. Additional minutes are charged $0.25/min.
+                Data: Get 5 GB to access the internet, email and apps. Additional data is charged $20/GB.
+                Text: You'll also get 1000 sent messages. You can receive unlimited incoming messages. Additional sent messages are $0.05/message
+                <br>
+                <br>
+                <b>(ii)</b>	<b>$100 international Monthly Plan – Recurring, Billed Monthly</b>
+                <br>
+                <br>
+                <b> o	</b>	This plan will continue to bill until a request is entered to have it removed. 
+                <br>
+                <br>
+                <b>(iii)</b>	<b>$100 international Monthly Plan – Expires after 30 days, One Time Charge</b>
+                <br>
+                <br>
+                <b> o	</b>	This plan will go into effect the date that it is added, and automatically fall off after 1 month
+                <br>
+                <br>
+                o	<b>For AT&T, you will have 4 options.</b>
+                <b>(i)</b>	AT&T 2GB Passport Package - <b>Expires after 30 days, One Time Charge</b>
+                    <br>
+                    <br>
+                    •	Voice: $0.35 Per Min
+                    Data: 2GB then $30per GB
+                    Messaging: Unlimited
+                    <br>
+                <br>
+                <b>(ii)</b>AT&T 2GB Passport Package – Recurring, billed monthly
+                    <br>
+                <br>
+                <b>(iii)</b>	AT&T 6GB Passport Package- <b>Expires after 30 days, One Time Charge</b>
+                    <br>
+                <br>
+                    •	Voice: $0.35 Per Min
+                    Data: 6GB then $30per GB
+                    Messaging: Unlimited
+                    <br>
+                <br>
+                <b>(iv)</b>	AT&T 6GB Passport Package – <b>Recurring, billed monthly</b>
+
+              </div>
+          </div>
+    
+          <div class="faq-question">
+            <input id="q11" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q11" class="panel-title">I have a question about my order or activity, who do I contact?</label>
+            <div class="panel-content">Send an email, chat or call the Tangoe Helpdesk
+              <br>
+              <br>
+              •	Send an email to auto.itron@tangoe.com  
+              <br>
+              <br>
+              •	You can use the <b>Live chat</b> feature  
+              <br>
+              <img src="img_6.png" alt="" height="100%" width="100%">
+              <br>
+              •	Call the Tangoe Helpdesk at 1-888-850-9553
+            </div>
+          </div>
+          <div class="faq-question">
+            <input id="q12" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q12" class="panel-title">How do I see the tracking number for my order shipment? </label>
+            <div class="panel-content">•	The tracking number will show in the “Activities” pane of your Dashboard. Scroll down until you reach this section to see the status of your order. If your order is completed & shipped the tracking link will be available and will take you to the shipping information. You will also receive an email confirmation that your order has shipped. It will look something like this: 
+              <br>
+              <br>
+              <img src="img_7.png" alt="" height="100%" width="100%">
+            </div>
+          </div>
+    
+          <div class="faq-question">
+            <input id="q14" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q14" class="panel-title">I’ve lost my phone, or my phone is broken, what do I do? </label>
+            <div class="panel-content">•	Update your manager that this event has occurred.  
+              <br>
+              <br>
+              •	To create a new order, go to the upper right corner and click the red button in top right with the “+” sign choose <b>New Activity</b> then scroll to select the activity <b>“Upgrade Device” </b>
+              <br>
+              <br>
+              •	Then fill the box in with your name, email or phone number
+              <br>
+              <br>
+              •	Your name and phone number will appear, click on correct name in the search results and then click the red button <b>“Start Activity” </b>
+              <br>
+              <br>
+              •	 If your phone is lost or stolen, toggle the button in the activity that asks “Is your current device lost or stolen?” This will notify the Tangoe team to reach out to the carrier to blacklist the lost or stolen device.
+              
+            </div>
+          </div>
+          <div class="faq-question">
+            <input id="q15" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q15" class="panel-title">I need to transfer my personal phone number to the Itron corporate account, how do I do that? </label>
+            <div class="panel-content">•	To create a transfer of liability activity, go to the upper right corner and click the red button in top right with the “+” sign choose <b>New Activity</b> and search for the Activity Type <b>choose the correct option from the choices shown below</b> and click <b> “Start Activity”</b>
+              <br>
+              <br>
+              <img src="img_10.png" alt="" height="100%" width="100%">
+              <br>
+              •	Search for your name, confirm your name when information comes on the screen and follow the steps. When you’ve completed filling out the required information, hit the <b>“submit”</b> button. 
+              <br>
+              <br>
+            •	Please be aware that since you are transferring from your personal account to Itron’s corporate account, regardless of your existing carrier,<b> you must contact the carrier to notify them you are authorizing Itron to assume your phone number to Itron’s corporate account.</b> If this initial step is not completed, your number can not be ported over to Itron’s corporate account.  Device must be paid off/not in contract and your account must be in good standing. 
+            <br>
+            <br>
+            •	If there are any subscriptions that are billed to your personal phone account, those subscriptions must be canceled temporarily prior to the transfer. Please work with your carrier to determine what subscriptions (if any) and how you can cancel them temporarily. If the subscriptions are not canceled, our carriers will not be able to transfer the liability to Itron. Be forewarned that Itron does not pay for iCloud storage.   Save/download anything currently saved on your phone that you don’t want to lose. 
+
+            </div>
+          </div>
+          <div class="faq-question">
+            <input id="q16" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q16" class="panel-title">I need to transfer my Itron corporate phone number to my personal account, how do I do that?</label>
+            <div class="panel-content">1.	To create a transfer of liability activity, go to the upper right corner and click the red button in top right with the “+” sign choose <b>New Activity</b> and search for the Activity Type “Transfer Corporate Line to Personal”
+              <br>
+              <br>
+              <img src="img_8.png" alt="" height="100%" width="100%">
+              <br>
+              <br>
+              2.	Enter your <b>Personal Email</b> and add any transfer notes
+              <br>
+              <br>
+              i.	Note – it is recommended that you transfer your line to a personal account with the same carrier (ex. If you currently have a Verizon line on the corporate account, transfer the line to a personal Verizon account). If you would like to change carriers once you have transferred to a personal account, you are able.
+              <br>
+              <br>
+              3.	When you have finished filling out the required information, select “Continue”
+              <br>
+              <br>
+              4.	Review your information on the following page, and select “Submit” 
+              
+              <br>
+              <br>
+              ii. <b>	Note, if you are separating from Tangoe</b> – After you receive confirmation that this request has been completed, you will have seven (7) business days to transfer your corporate line(s) to a personal account. If you do not take action within seven (7) business days, your line(s) will be disconnected and can not be reactivated.
+              <br>
+              <br>
+              iii.	Note - Please be aware that if  you are transferring from the corporate account to your personal account, an authorization needs to be submitted on Itron’s end to release the line to you to take to a personal account.  When the line is released, if it is mid contract, and you are not staying with the same carrier, an early termination fee may apply.  Your manager will need to approve, releasing the number/device and paying the early termination fee.   If you plan to stay with the current carrier there is no early termination fee, just know that you will be expected to complete the contract on your personal account
+
+            </div>
+          </div>
+          <div class="faq-question">
+            <input id="q17" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q17" class="panel-title">How do I disconnect a line that is no longer needed?</label>
+            <div class="panel-content">1.	To create a disconnect activity, go to the upper right corner and click the red button in top right with the “+” sign choose New Activity and search for the Activity Type <b>“Disconnect Service”</b>
+              <br>
+              <br>
+              2.	Choose whether you would like to use an ETF waiver or not. If you are not sure if your line has an ETF (Early Termination Fee), please contact Tangoe Support (refer to section 11 for contact information) 
+              <br>
+              <br>
+              3.	When you have finished filling out the required information, select <b> “Continue”</b>
+              <br>
+              <br>
+              4.	Review your information on the following page, and select <b>“Submit”</b> 
+              
+            </div>
+          </div>
+          <div class="faq-question">
+            <input id="q18" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q18" class="panel-title">How do I exchange a device from an order that I placed?</label>
+            <div class="panel-content">1.	Verizon and AT&T provide the option to exchange your device for a different device within 30 days of the purchase date
+              <br>
+              <br>
+              2.	If you’d like to process an exchange, contact the Tangoe Help Desk. 
+              <br>
+              <br>
+              3.	The Tangoe Help Desk will provide you with a return label to return the device you’d like to exchange and can process the order for a new device 
+              
+            </div>
+          </div>
+          <div class="faq-question">
+            <input id="q19" type="checkbox" class="panel">
+            <div class="plus">+</div>
+            <label for="q19" class="panel-title">I have a question that isn’t listed on this document, who do I reach out to?</label>
+            <div class="panel-content">•	Send an email to <a href="auto.itron@tangoe.com ">auto.itron@tangoe.com </a> 
+              <br>
+              <br>
+              •	You can use the Live chat feature 
+              <br>
+              <br>
+              <img src="img_9.png" alt="" height="100%" width="100%"> 
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
